@@ -5,12 +5,13 @@ import org.springframework.security.core.GrantedAuthority;
 
 import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY);
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String username;
@@ -36,6 +37,8 @@ public class Account {
         this.transactionList = transactionList;
         this.authorities = authorities;
     }
+
+
 
     public Long getId() {
         return id;
